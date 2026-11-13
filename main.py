@@ -6,6 +6,18 @@ and see which maintenance is overdue.
 from dataclasses import dataclass
 
 from drafter import *
+set_website_title("Vehicle Maintenance Tracker")
+set_site_information(
+    author="Liam Speciale",
+    description=("Track a car's mileage, log services, "
+                 "and see overdue maintenance."),
+    sources=("Thanks to the Drafter docs. "),
+    planning=["brainstorm.pdf", "design.pdf"],
+    links=["https://github.com/liamspec/car-maintenance-tracker1"]
+)
+hide_debug_information()
+set_website_framed(False)
+
 
 
 TASK_NAMES: list[str] = ["Oil Change", "Tire Rotation",
@@ -475,15 +487,4 @@ assert_equal(
 
 start_server(State("My Car", 0, "", []))
 
-set_website_title("Vehicle Maintenance Tracker")
-set_site_information(
-    author="Liam Speciale",
-    description=("Track a car's mileage, log services, "
-                 "and see overdue maintenance."),
-    sources=("Thanks to the Drafter docs. "),
-    planning=["brainstorm.pdf", "design.pdf"],
-    links=["https://github.com/liamspec/car-maintenance-tracker1"]
-)
-hide_debug_information()
-set_website_framed(False)
 
